@@ -45,9 +45,9 @@ footer {
     padding: 20px 0;
     text-align: center; 
     margin: 0 auto;
-    min-height: 100px; /* set a minimum height */
+    min-height: 100px; 
     position: fixed;
-    bottom: 0; /* position the footer at the bottom of the page */
+    bottom: 0; 
     width: 100%;
   }
 
