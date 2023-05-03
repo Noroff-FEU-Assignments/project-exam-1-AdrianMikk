@@ -76,10 +76,6 @@ nav {
   z-index: 1;
 }
 
-nav p {
-  /* font-size: 12px; */
-}
-
 .logo {
     color: black;
     letter-spacing: 5px;
@@ -92,12 +88,18 @@ nav p {
     /* float: left; */
 }
 
+.logo-text {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
 .nav-links {
     display: flex;
     justify-content: space-around;
     width: 30%;
     z-index: 2;
-    /* På 768 setter du på display flex */
+    /* På 768 display flex */
 }
 
 .nav-links a {
@@ -110,7 +112,7 @@ nav p {
 .burger {
     display: none;
     cursor: pointer;
-    /* På 768 setter du på display none */
+    /* På 768 display none */
 }
 
 .burger div {
@@ -357,6 +359,7 @@ nav p {
   color: white;
   text-align: center;
   padding: 40px;
+  padding-bottom: 120px;
 }
 
 @media screen and (max-width:1024px) {
