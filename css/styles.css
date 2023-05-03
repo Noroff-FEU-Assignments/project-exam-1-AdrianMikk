@@ -142,8 +142,13 @@ nav {
 }
 
 .post div {
-  margin-top: -10rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: -12.5rem;
   margin-bottom: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
 }
 .post h2 {
   color: white;
