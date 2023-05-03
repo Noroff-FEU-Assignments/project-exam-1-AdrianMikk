@@ -37,7 +37,7 @@ const fullPostURL = "https://travelblog.hoiskypoisky.no/wp-json/wp/v2/posts";
 const featured = "?featured=true";
 
 async function fetchFeatured() {
-    const response = await fetch(fullPostURL);
+    const response = await fetch(fullPostURL + featured);
     const data = await response.json();
     
     return data;

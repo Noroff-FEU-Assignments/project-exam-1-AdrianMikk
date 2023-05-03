@@ -41,11 +41,11 @@ body {
 /* Footer */
 
 footer {
-    background: black;
+    background: white;
     padding: 20px 0;
     text-align: center; 
+    font-weight: bold;
     margin: 0 auto;
-    min-height: 100px; 
     position: fixed;
     bottom: 0; 
     width: 100%;
@@ -53,11 +53,11 @@ footer {
 
   .footer-p {
     font-size: 16px;
-    color: white;
+    color: black;
   }
 
   .footer-links {
-    color: white;
+    color: black;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -159,10 +159,10 @@ nav {
     display: flex;
     flex-direction: column;
     position: absolute;
-    z-index: 1;
+    /* z-index: 1; */
     top: 50%;
     left: 50%;
-    margin-top: 110px;
+    margin-top: 80px;
     transform: translate(-50%, -50%);
     color: white;
   }

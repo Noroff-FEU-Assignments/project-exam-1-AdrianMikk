@@ -92,3 +92,67 @@ form.addEventListener("submit", function (event) {
     event.preventDefault();
   }
 });
+
+
+// hmmmmm 
+
+function addErrorMessage(message, field) {
+  const errorMessage = document.createElement("div");
+  errorMessage.classList.add("error-message");
+  errorMessage.textContent = message;
+  field.classList.add("error");
+  field.style.borderColor = "red"; // add red border color
+  field.parentNode.insertBefore(errorMessage, field.nextSibling);
+}
+
+fullName.addEventListener("input", () => {
+  if (fullName.classList.contains("error")) {
+    if (checkLength(fullName.value, 4)) {
+      fullName.classList.remove("error");
+      const errorMessage = fullName.nextSibling;
+      if (errorMessage && errorMessage.classList.contains("error-message")) {
+        fullName.parentNode.removeChild(errorMessage);
+      }
+      fullName.style.borderColor = "";
+    }
+  }
+});
+
+subject.addEventListener("input", () => {
+  if (subject.classList.contains("error")) {
+    if (checkLength(subject.value, 14)) {
+      subject.classList.remove("error");
+      const errorMessage = subject.nextSibling;
+      if (errorMessage && errorMessage.classList.contains("error-message")) {
+        subject.parentNode.removeChild(errorMessage);
+      }
+      subject.style.borderColor = "";
+    }
+  }
+});
+
+email.addEventListener("input", () => {
+  if (email.classList.contains("error")) {
+    if (validateEmail(email.value)) {
+      email.classList.remove("error");
+      const errorMessage = email.nextSibling;
+      if (errorMessage && errorMessage.classList.contains("error-message")) {
+        email.parentNode.removeChild(errorMessage);
+      }
+      email.style.borderColor = "";
+    }
+  }
+});
+
+message.addEventListener("input", () => {
+  if (message.classList.contains("error")) {
+    if (checkLength(message.value, 24)) {
+      message.classList.remove("error");
+      const errorMessage = message.nextSibling;
+      if (errorMessage && errorMessage.classList.contains("error-message")) {
+        message.parentNode.removeChild(errorMessage);
+      }
+      message.style.borderColor = "";
+    }
+  }
+});
