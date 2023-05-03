@@ -20,7 +20,7 @@ body {
 .home-h1 {
     font-size: 20px;
     color: #fff;
-    margin-top: 40px;
+    margin-top: 80px;
   }
   
   .home-h2 {
@@ -41,7 +41,7 @@ body {
 /* Footer */
 
 footer {
-    background: white;
+    background: black;
     padding: 20px 0;
     text-align: center; 
     font-weight: bold;
@@ -57,7 +57,7 @@ footer {
   }
 
   .footer-links {
-    color: black;
+    color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -76,6 +76,10 @@ nav {
   z-index: 1;
 }
 
+nav p {
+  font-size: 12px;
+}
+
 .logo {
     color: black;
     letter-spacing: 5px;
@@ -89,10 +93,11 @@ nav {
 }
 
 .nav-links {
-    display: flex;
+    display: none;
     justify-content: space-around;
     width: 30%;
     z-index: 2;
+    /* På 768 setter du på display flex */
 }
 
 .nav-links a {
@@ -103,8 +108,9 @@ nav {
 }
 
 .burger {
-    display: none;
+    /* display: none; */
     cursor: pointer;
+    /* På 768 setter du på display none */
 }
 
 .burger div {
@@ -117,11 +123,46 @@ nav {
 
 /* Posts */
 
+.post {
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.post img {
+  /* position: absolute; */
+  height: 20rem;
+  width: 20rem;
+}
+
+.post div {
+  margin-top: -10rem;
+  margin-bottom: 10rem;
+}
+.post h2 {
+  color: white;
+  z-index: 10;
+  margin: 0 auto;
+}
+
+.post a {
+  margin-top: -25rem;
+  color: black;
+  z-index: 10;
+}
+
 .posts-image-container {
     background-image:  linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4)), url(/images/HomepageImage-min.jpg);
+    position: absolute;
     background-position: center;
     background-size: cover;
-    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
 }
 
 .posts-text {
@@ -132,7 +173,7 @@ nav {
 .posts-h1 {
     font-size: 20px;
     color: #fff;
-    margin-top: 40px;
+    margin-top: 70px;
   }
   
 .posts-h2 {
@@ -148,7 +189,7 @@ nav {
 .contact-h1 {
     color: white;
     text-align: center;
-    padding-top: 60px;
+    padding-top: 80px;
 }
 
 .contact-image-container {
@@ -166,7 +207,7 @@ nav {
     /* z-index: 1; */
     top: 50%;
     left: 50%;
-    margin-top: 80px;
+    margin: auto;
     transform: translate(-50%, -50%);
     color: white;
   }
@@ -176,12 +217,13 @@ nav {
     margin-bottom: 30px;
   }
   
-  /* .contact__flex {
+  .contact__flex {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-    /* padding: 15px; */
+    padding: 15px;
+  }
   
   .contact__text {
     max-width: 100%;
@@ -308,7 +350,7 @@ nav {
 .about-h1 {
     color: white;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 90px;
 }
 
 .about-text {
@@ -317,7 +359,7 @@ nav {
   padding: 40px;
 }
 
-@media screen and (max-width:1024px) {
+/* @media screen and (min-width:1024px) {
     
     .nav-links {
         width: 60%;
@@ -325,7 +367,7 @@ nav {
 }
 
 
-@media screen and (max-width:768px) {
+@media screen and (min-width:768px) {
     
     body {
         overflow-x: hidden;
@@ -353,7 +395,7 @@ nav {
     .burger {
         display: block;
     }
-}
+} */
   
 .nav-active {
     transform: translateX(0%);
