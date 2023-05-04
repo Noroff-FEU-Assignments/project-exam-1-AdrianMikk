@@ -53,7 +53,7 @@ footer {
 
   .footer-p {
     font-size: 16px;
-    color: black;
+    color: white;
   }
 
   .footer-links {
@@ -61,6 +61,11 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+  }
+
+  .footer-links a {
+    text-decoration: none;
+    color: inherit;
   }
 
 /* NAVIGATION */ 
