@@ -141,9 +141,9 @@ nav {
 }
 
 .post img {
-  /* position: absolute; */
   height: 20rem;
   width: 20rem;
+  margin: auto;
 }
 
 .post div {
@@ -169,12 +169,19 @@ nav {
 
 .posts-image-container {
     background-image:  linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4)), url(/images/HomepageImage-min.jpg);
-    position: absolute;
+    /* position: absolute; */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     width: 100%;
+}
+
+.posts-container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .posts-text {

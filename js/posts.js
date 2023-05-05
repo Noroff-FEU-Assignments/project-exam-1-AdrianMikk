@@ -21,8 +21,8 @@ function renderPost(data) {
         const postElement = document.createElement("div");
         postElement.classList.add("post");
         postElement.innerHTML = `
-            <img src="${featuredPost._embedded['wp:featuredmedia'][0].source_url}"/>
             <div>
+            <img src="${featuredPost._embedded['wp:featuredmedia'][0].source_url}"/>
             <h2>${featuredPost.title.rendered}</h2>
             <button>
             <a href="${featuredPost.link}">Read more</a>
