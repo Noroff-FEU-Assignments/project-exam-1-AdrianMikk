@@ -131,19 +131,12 @@ nav {
 /* Posts */
 
 .post {
-  width: 50%;
-  margin: 5px auto;
-  position: relative;
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  margin: 20px auto;
 }
 
 .post img {
-  height: 20rem;
+  height: 15rem;
   width: 20rem;
-  margin: auto;
 }
 
 .post div {
@@ -155,11 +148,6 @@ nav {
   margin-right: auto;
   justify-content: center;
 }
-.post h2 {
-  color: white;
-  z-index: 10;
-  margin: 0 auto;
-}
 
 .post a {
   margin-top: -25rem;
@@ -167,41 +155,54 @@ nav {
   z-index: 10;
 }
 
-.posts-image-container {
-    background-image:  linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4)), url(/images/HomepageImage-min.jpg);
-    /* position: absolute; */
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    width: 100%;
+.list-container { 
+  background-image:  linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4)), url(/images/HomepageImage-min.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100vw;
+  display: flex;
 }
 
-.posts-container {
-  margin: auto;
-  display: flex;
-  flex-direction: column;
+.posts-image-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.postsContainer {
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
   justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
 }
 
 .posts-text {
-    text-align: center;
-    padding-top: 20px;
+  text-align: center;
+  padding-top: 50px;
 }
 
 .posts-h1 {
-    font-size: 20px;
-    color: #fff;
-    margin-top: 70px;
-  }
+  font-size: 20px;
+  color: #fff;
+  margin-top: 70px;
+}
   
 .posts-h2 {
-    font-size: 16px;
-    font-weight: lighter;
-    color: #fff;
-    line-height: 1.5;
-    padding: 30px;
-  }
+  font-size: 16px;
+  font-weight: lighter;
+  color: #fff;
+  line-height: 1.5;
+  padding: 30px;
+}
+
+.post h2 {
+  color: white;
+}
 
 /* About Us */ 
 

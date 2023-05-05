@@ -23,10 +23,12 @@ function renderPost(data) {
         postElement.innerHTML = `
             <div>
             <img src="${featuredPost._embedded['wp:featuredmedia'][0].source_url}"/>
+            <div>
             <h2>${featuredPost.title.rendered}</h2>
             <button>
             <a href="${featuredPost.link}">Read more</a>
             </button>
+            </div>
             </div>
         `;
 
