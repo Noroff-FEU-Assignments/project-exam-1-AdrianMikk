@@ -1,43 +1,45 @@
+// Get the carousel container and slide elements
+const carouselContainer = document.querySelector('.carousel-container');
+const carouselSlide = document.querySelector('.carousel-slide');
 
-const fullPostURL = "https://travelblog.hoiskypoisky.no/wp-json/wp/v2/posts?_embed ";
-// const featured = "?featured=true";
+// Get the images and calculate the slide width
+const carouselImages = carouselSlide.querySelectorAll('img');
+const slideWidth = carouselImages[0].clientWidth;
 
-async function fetchFeatured() {
-    const response = await fetch(fullPostURL);
-    const data = await response.json();
-    
-    return data;
-}
+// Set the slide index and initial position
+let slideIndex = 0;
+let slidePosition = 0;
 
-const postContainer = document.querySelector(".postsContainer");
+// Create the previous and next button elements
+const prevButton = document.createElement('button');
+prevButton.textContent = 'Prev';
+prevButton.classList.add('carousel-button', 'carousel-prev');
+const nextButton = document.createElement('button');
+nextButton.textContent = 'Next';
+nextButton.classList.add('carousel-button', 'carousel-next');
 
-function renderPost(data) {
-    for (let i = 0; i < data.length; i++) {
-        const featuredPost = data[i];
-        // console.log(featuredPost);
-        console.log(data[0]._embedded['wp:featuredmedia'][0].source_url)
+// Add the button elements to the carousel container
+carouselContainer.appendChild(prevButton);
+carouselContainer.appendChild(nextButton);
 
-        // create a new element to hold the post information
-        const postElement = document.createElement("div");
-        postElement.classList.add("post");
-        postElement.innerHTML = `
-            <img src="${featuredPost._embedded['wp:featuredmedia'][0].source_url}"/>
-            <div>
-            <h2>${featuredPost.title.rendered}</h2>
-            <button>
-            <a href="${featuredPost.link}">Read more</a>
-            </button>
-            </div>
-        `;
+// Add click event listeners to the button elements
+prevButton.addEventListener('click', () => {
+  slideIndex--;
+  slidePosition += slideWidth;
+  if (slideIndex < 0) {
+    slideIndex = carouselImages.length - 1;
+    slidePosition = -slideWidth * (carouselImages.length - 1);
+  }
+  carouselSlide.style.transform = `translateX(${slidePosition}px)`;
+});
 
-        // add the post element to the post container
-        postContainer.appendChild(postElement);
-    }
-}
+nextButton.addEventListener('click', () => {
+  slideIndex++;
+  slidePosition -= slideWidth;
+  if (slideIndex >= carouselImages.length) {
+    slideIndex = 0;
+    slidePosition = 0;
+  }
+  carouselSlide.style.transform = `translateX(${slidePosition}px)`;
+});
 
-async function main() {
-    const posts = await fetchFeatured();
-    renderPost(posts)
-}
-
-main();

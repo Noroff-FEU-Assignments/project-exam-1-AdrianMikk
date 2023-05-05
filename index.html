@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/carousel.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
-    <!-- <script src="/js/index.js" defer></script> -->
+    <script src="/js/index.js" defer></script>
     <script src="/js/navigation.js" defer></script>
+    <script src="/js/carousel.js" defer></script>
     <title>A & K's Travel Blog | Home</title>
   </head>
   <body>
@@ -51,6 +53,29 @@
           ourselves in new cultures, trying new foods, and experiencing
           everything that each destination has to offer.
         </h2>
+        <div class="carousel">
+          <button class="carousel-button carousel-button-left">
+            <img src="/images/AboutImage-min.jpg" alt="" />
+          </button>
+
+          <div class="carousel-track-container">
+            <ul class="carousel-track">
+              <li class="carousel-slide current-slide"></li>
+              <li class="carousel-slide"></li>
+              <li class="carousel-slide"></li>
+            </ul>
+          </div>
+
+          <button class="carousel-button carousel-button-right">
+            <img src="/images/ContactImage-min.jpg" alt="" />
+          </button>
+
+          <div class="carousel-nav">
+            <button class="carousel-indicator current-slide"></button>
+            <button class="carousel-indicator"></button>
+            <button class="carousel-indicator"></button>
+          </div>
+        </div>
       </div>
     </div>
   </body>
