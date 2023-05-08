@@ -32,7 +32,7 @@ body {
   }
 
   .home-image-container {
-      /* background-image:  linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4)), url(/images/HomepageImage-min.jpg); */
+      /* background-image:  linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4)), url(/images/HomepageImage-min.jpg);   */
       background-position: center;
       background-size: cover;
       height: 100vh;
