@@ -12,7 +12,7 @@
 }
 
 .carousel__track-container {
-    background: lightgreen;
+    /* background: lightgreen; */
     height: 50%; /* FIKSE HEIGHT */
     position: relative;
     overflow: hidden;

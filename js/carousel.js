@@ -71,7 +71,7 @@ nextButton.addEventListener("click", e => {
     const nextSlide = currentSlide.nextElementSibling;
     const currentDot = dotsNav.querySelector(".current-slide");
     const nextDot = currentDot.nextElementSibling;
-    const nextIndex = slide.findIndex(slide => slide === nextSlide);
+    const nextIndex = slides.findIndex(slide => slide === nextSlide);
 
     moveToSlide(track, currentSlide, nextSlide);
     updateDots(currentDot, nextDot);
@@ -94,6 +94,6 @@ dotsNav.addEventListener("click", e => {
 
     moveToSlide(track, currentSlide, targetSlide);
     updateDots(currentDot, targetDot);
-    hideShowArrows(slides, prevButton, nextButton, nextIndex);
+    hideShowArrows(slides, prevButton, nextButton, targetIndex);
 
 })
