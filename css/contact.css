@@ -26,9 +26,10 @@
     color: white;
   }
   
-  .contact__h1 {
+  .contact-h1 {
     font-size: 2rem;
     margin-bottom: 30px;
+    padding-top: 130px;
   }
   
   .contact__flex {
@@ -147,4 +148,20 @@
     color: var(--error-red);
   }
 
-/* About Us */ 
+/* MEDIA QUERIES */ 
+
+@media screen and (max-width:1024px) {
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .contact {
+    padding-top: 140px;
+  }
+  .contact-h1 {
+    padding-top: 110px;
+  }
+}

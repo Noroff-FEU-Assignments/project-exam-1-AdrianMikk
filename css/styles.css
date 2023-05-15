@@ -31,6 +31,10 @@ body {
     padding: 30px;
   }
 
+  .home-h1, .home-h2 {
+    padding-top: 40px;
+  }
+
   .home-image-container {
       /* background-image:  linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4)), url(/images/HomepageImage-min.jpg);   */
       background-position: center;
@@ -49,15 +53,16 @@ footer {
     position: fixed;
     bottom: 0; 
     width: 100%;
+    background-color: rgba(0, 195, 255, 1);
   }
 
   .footer-p {
     font-size: 16px;
-    color: white;
+    color: black;
   }
 
   .footer-links {
-    color: white;
+    color: black;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -79,6 +84,8 @@ nav {
   width: 100%;
   position: fixed;
   z-index: 1;
+  border-bottom: 1px solid black;
+  /* background-color: rgba(0, 195, 255, 0.685); */
 }
 
 .logo {
@@ -97,6 +104,7 @@ nav {
   text-align: center;
   font-weight: bold;
   font-size: 20px;
+  color: black;
 }
 
 .nav-links {
@@ -128,10 +136,16 @@ nav {
     transition: all 0.3s ease;
 }
 
+a.active,
+a:hover {
+  background: rgba(0, 195, 255, 0.2);
+  border-radius: 2px;
+  transition: 0.5s;
+}
+
 /* Posts */
 
 .post {
-  /* margin: 20px auto; */
 }
 
 .post-button {
@@ -140,12 +154,18 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: -4rem;
+  margin-bottom: 100px;
+  background-color: rgba(0, 195, 255, 1);
+}
+
+.post-button a {
+  /* background-color: rgba(0, 195, 255, 0.685); */
+  text-decoration: none;
 }
 
 .post img {
   height: 15rem;
-  width: 20rem;
+  width: 16rem;
   border-radius: 5px;
 }
 
@@ -173,7 +193,6 @@ nav {
 
 .posts-image-container {
   width: 100vw;
-  /* height: 100vh; */
 }
 
 .postsContainer {
@@ -187,6 +206,7 @@ nav {
   padding: 20px;
   max-width: 1400px;
   margin: auto;
+  padding-bottom: 76px;
 }
 
 .posts-text {
@@ -283,7 +303,7 @@ nav {
         right: 0px;
         height: 92vh;
         top: 8vh;
-        background-color: #645f5c;
+        background: linear-gradient(90deg,#7bed9f, #3498db);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -293,9 +313,6 @@ nav {
     }
     .nav-links li {
         opacity: 0;
-    }
-    .nav-links a {
-        color: white;
     }
     .burger {
         display: block;
