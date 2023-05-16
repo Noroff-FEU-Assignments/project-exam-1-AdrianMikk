@@ -98,3 +98,21 @@ document.addEventListener("click", e => {
       setTimeout(timeoutFunc, delay)
     }
   }
+
+
+
+
+//   <div class="slider">
+//   <img src="/images/raimond-klavins-KvVCDvD1_t0-unsplash 1-min.png">
+//   <img src="/images/damiano-baschiera-hFXZ5cNfkOk-unsplash 2-min.png">
+//   <img src="/images/kylefromthenorth-UrhglJ-2Q8M-unsplashcarousel-min.png">
+//   <img src="/images/james-ting-6N2mSJsKTtA-unsplash 2-min.png">
+//   <img src="/images/raimond-klavins-JqT2Wp5S0Dk-unsplash 2-min.png">
+//   <img src="/images/jose-llamas--8Ir6uO4a_A-unsplash 2-min.png">
+//   <img src="/images/cyril-mazarin-WSvth_lwCi0-unsplash 3-min.png">
+//   <img src="/images/rolands-varsbergs-ePOH0oKeOjE-unsplash 2-min.png">
+//   <img src="/images/timo-wagner-fT6-YkB0nfg-unsplash 2-min.png">
+//   <img src="/images/guille-pozzi-g3esK1uXCjM-unsplash 2-min.png">
+//   <img src="/images/chelsea-gates-0653_wY0nRc-unsplash 2-min.png">
+//   <img src="/images/rosario-janza-69qT-N3L5sc-unsplash 2-min.png">
+// </div>
