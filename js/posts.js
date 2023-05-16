@@ -26,7 +26,7 @@ function renderPost(data) {
             <div class="post-button">
             <h2>${featuredPost.title.rendered}</h2>
             <button>
-            <a href="${featuredPost.link}">Read more</a>
+            <a href="../specific.html?id=${featuredPost.id}">Read more</a>
             </button>
             </div>
             </div>

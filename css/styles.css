@@ -231,6 +231,45 @@ a:hover {
   color: white;
 }
 
+/* SPECIFIC */
+
+.specificContainer {
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 85px;
+  max-width: 1400px;
+  margin: auto;
+  padding-bottom: 76px;
+}
+
+.specificContainer figure {
+  display: flex;
+  flex-direction: row;
+}
+
+.specificContainer figure img {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.specific-h1 {
+  padding-top: 120px;
+  text-align: center;
+  color: white;
+}
+
+.specificContainer p {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  color: white;
+  padding-bottom: 30px;
+}
+
 /* About Us */
 
 .about-image-container {
@@ -304,6 +343,10 @@ a:hover {
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
+  }
+  .specificContainer figure {
+    display: flex;
+    flex-direction: column;
   }
 
   .nav-links {
