@@ -55,6 +55,7 @@ footer {
   bottom: 0;
   width: 100%;
   background-color: rgba(0, 195, 255, 1);
+  z-index: 5;
 }
 
 .footer-p {
@@ -259,7 +260,7 @@ a:hover {
 .specific-h1 {
   padding-top: 120px;
   text-align: center;
-  color: white;
+  color: black;
 }
 
 .specificContainer p {
