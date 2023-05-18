@@ -107,3 +107,30 @@ document.addEventListener("click", e => {
   const categoryFilterParam = "?categories=";
 
     // ?per_page=10?page=2
+
+    /* ? ? ? ? */
+
+    fetch("https://travelblog.hoiskypoisky.no/wp-json/wp/v2/media")
+      .then(response => response.json())
+      .then(data => {
+        const images = data.map(item => item.source_url);
+
+        // Create carousel slides
+        const carousel = $('.carousel');
+        images.forEach(image => {
+          const slide = $('<div class="carousel-slide"><img src="' + image + '"></div>');
+          carousel.append(slide);
+        });
+
+        // Initialize the Slick carousel
+        carousel.slick({
+          dots: true,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 1,
+          slidesToScroll: 1
+        });
+      })
+      .catch(error => {
+        console.log('Error:', error);
+      });
