@@ -42,7 +42,7 @@ body {
   flex-grow: 0;
   flex-shrink: 0;
   background-color: white;
-  z-index: 10;
+  z-index: 2;
   margin: var(--img-gap) 0;
   width: var(--handle-size);
   cursor: pointer;
