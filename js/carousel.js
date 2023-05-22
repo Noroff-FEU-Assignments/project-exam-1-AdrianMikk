@@ -16,7 +16,7 @@ for (let i = 0; i < data.length; i++) {
   const featuredImgData = data[i].jetpack_featured_media_url;
   
   populateDiv(featuredImgData)
-     
+
 }
 }
 
@@ -28,9 +28,12 @@ img.src = imgUrls;
 container.append(img);
 }
 
-fetchCarouselImage()
 
-document.addEventListener("click", e => {
+async function main() {
+  
+  await fetchCarouselImage()
+
+  document.addEventListener("click", e => {
     let handle
     if (e.target.matches(".handle")) {
       handle = e.target
@@ -131,6 +134,11 @@ document.addEventListener("click", e => {
     }
   }
 
+}
+
+main()
+
+
 
 //   const baseUrl = "https://travelblog.hoiskypoisky.no/wp-json/wp/v2/posts?per_page=12"; 
 //   const perPage = "?per_page=";
@@ -150,7 +158,7 @@ document.addEventListener("click", e => {
 //     const featuredImgData = data[i].jetpack_featured_media_url;
     
 //     populateDiv(featuredImgData)
-       
+
 //   }
 // }
 
