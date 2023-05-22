@@ -101,7 +101,7 @@ function addErrorMessage(message, field) {
   errorMessage.classList.add("error-message");
   errorMessage.textContent = message;
   field.classList.add("error");
-  field.style.borderColor = "red"; // add red border color
+  field.style.borderColor = "red"; 
   field.parentNode.insertBefore(errorMessage, field.nextSibling);
 }
 

@@ -1,3 +1,35 @@
+const baseUrl = "https://travelblog.hoiskypoisky.no/wp-json/wp/v2/posts?per_page=12"; 
+const perPage = "?per_page=";
+const perPageNum = 10;
+const pageParam = "&page=";
+const categoryFilterParam = "?categories=";
+
+async function fetchCarouselImage() {
+const response = await fetch(baseUrl) 
+const data = await response.json()
+fetchImgIds(data);
+}
+
+function fetchImgIds(data) {
+for (let i = 0; i < data.length; i++) {
+  
+  const featuredImgData = data[i].jetpack_featured_media_url;
+  
+  populateDiv(featuredImgData)
+     
+}
+}
+
+function populateDiv(imgUrls) {
+const container = document.querySelector(".slider");
+console.log(imgUrls)
+const img = document.createElement("img");
+img.src = imgUrls;
+container.append(img);
+}
+
+fetchCarouselImage()
+
 document.addEventListener("click", e => {
     let handle
     if (e.target.matches(".handle")) {
@@ -100,37 +132,35 @@ document.addEventListener("click", e => {
   }
 
 
-  const baseUrl = "https://travelblog.hoiskypoisky.no/wp-json/wp/v2/posts/"; 
-  const perPage = "?per_page=";
-  const perPageNum = 10;
-  const pageParam = "&page=";
-  const categoryFilterParam = "?categories=";
+//   const baseUrl = "https://travelblog.hoiskypoisky.no/wp-json/wp/v2/posts?per_page=12"; 
+//   const perPage = "?per_page=";
+//   const perPageNum = 10;
+//   const pageParam = "&page=";
+//   const categoryFilterParam = "?categories=";
 
-    // ?per_page=10?page=2
+// async function fetchCarouselImage() {
+//   const response = await fetch(baseUrl) 
+//   const data = await response.json()
+//   fetchImgIds(data);
+// }
 
-    /* ? ? ? ? */
+// function fetchImgIds(data) {
+//   for (let i = 0; i < data.length; i++) {
+    
+//     const featuredImgData = data[i].jetpack_featured_media_url;
+    
+//     populateDiv(featuredImgData)
+       
+//   }
+// }
 
-    fetch("https://travelblog.hoiskypoisky.no/wp-json/wp/v2/media")
-      .then(response => response.json())
-      .then(data => {
-        const images = data.map(item => item.source_url);
+// function populateDiv(imgUrls) {
+//   const container = document.querySelector(".slider")
+//   // container.classList.add("--slider-index: 2")
+//   console.log(imgUrls)
+//   const img = document.createElement("img");
+//   img.src = imgUrls;
+//   container.append(img);
+// }
 
-        // Create carousel slides
-        const carousel = $('.carousel');
-        images.forEach(image => {
-          const slide = $('<div class="carousel-slide"><img src="' + image + '"></div>');
-          carousel.append(slide);
-        });
-
-        // Initialize the Slick carousel
-        carousel.slick({
-          dots: true,
-          infinite: true,
-          speed: 500,
-          slidesToShow: 1,
-          slidesToScroll: 1
-        });
-      })
-      .catch(error => {
-        console.log('Error:', error);
-      });
+// fetchCarouselImage()
