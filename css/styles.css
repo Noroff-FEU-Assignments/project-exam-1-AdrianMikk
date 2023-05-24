@@ -303,6 +303,11 @@ a:hover {
   width: 100%;
 }
 
+.specificContainer figure img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
 .specific-h1 {
   padding-top: 120px;
   text-align: center;
@@ -313,6 +318,20 @@ a:hover {
   background-color: rgba(0, 0, 0, 0.6);
   display: inline-block;
   color: white;
+  padding: 10px;
+}
+
+.modalContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modalContainer img {
+  scale: 1.5;
+  width: 100%;
+  height: fit-content;
   padding: 10px;
 }
 

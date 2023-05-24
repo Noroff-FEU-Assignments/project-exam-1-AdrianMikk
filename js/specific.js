@@ -3,7 +3,7 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 console.log(id);
 
-async function satanihelvete() {
+async function fetchSpecificPost() {
     const url = "https://travelblog.hoiskypoisky.no/wp-json/wp/v2/posts/"
     const response = await fetch(url + id);
     const data = await response.json();
@@ -22,12 +22,51 @@ function renderPost(post) {
     
     const h1 = document.querySelector(".specific-h1")
       h1.innerText = post.title.rendered;
+
+
+      const images = specificContainer.getElementsByTagName("img");
+        // console.log(images);
+        for (let i = 0; i < images.length; i++) {
+          // console.log(images[i]);
+
+          let img = images[i];
+          let image = img.cloneNode(true);
+          let index = 0;
+
+          img.addEventListener("click", function() {
+            // console.log("click works", index++);
+            // img.style.scale = "2";
+            const specificContainer = document.querySelector(".specificContainer");
+
+            const modalContainer = document.createElement("div");
+            modalContainer.classList.add("modalContainer");
+            modalContainer.style.maxWidth = "100%"
+            modalContainer.style.maxHeight = "fit-content"
+            modalContainer.style.zIndex = "99";
+            modalContainer.append(image);
+            // specificContainer.style.filter = "blur(10px)";
+            // const modal = document.createElement("img")
+            // modal.innerHTML = img;
+            // modal.style.scale = "3";
+            // modalContainer.append(modal);
+            specificContainer.append(modalContainer);
+            
+          });
+        }
+
+        
 }
 
 
   async function main() {
-    const post = await satanihelvete();
+    const post = await fetchSpecificPost();
     renderPost(post);
 }
 main();
 
+// function grabImg(data) {
+//  const img = document.createElement("div")
+//  img.innerHTML = data;
+
+//  const
+// }
