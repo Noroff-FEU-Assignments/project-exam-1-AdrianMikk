@@ -26,7 +26,10 @@
   transform: translate(-50%, -50%);
   color: white;
   width: 500px;
-  height: 300px;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 20px;
+  border-radius: 8px;
 }
 
 .contact__flex {
@@ -59,7 +62,7 @@
   background-color: rgba(0, 0, 0, 0.4);
   margin: auto;
   padding: 20px;
-  border-radius: 0px 25px 0px 25px;
+  border-radius: 10px;
   /* margin-bottom: 100px; */
 }
 
@@ -159,5 +162,11 @@
 @media screen and (max-width: 768px) {
   .contact-h1 {
     padding-top: 110px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact {
+    width: 90%;
   }
 }

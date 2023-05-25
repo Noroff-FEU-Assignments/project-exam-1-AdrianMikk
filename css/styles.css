@@ -177,16 +177,18 @@ a:hover {
 
 .viewmore-button {
   display: flex;
-  position: relative;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 200px;
   height: 50px;
-  margin: auto;
-  margin-top: auto;
   justify-content: center;
   align-items: center;
   font-size: larger;
   border-radius: 10px;
   background-color: var(--post-blue);
+  z-index: 9999;
 }
 
 .post-button a {
@@ -222,27 +224,11 @@ a:hover {
   background-color: var(--post-hoverblue);
 }
 
-/* .list-container {
-  background-image: linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4)),
-    url(/images/HomepageImage-min.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: repeat;
-  background-attachment: fixed;
-  height: 100vh;
-} */
-
 .posts-image-container {
-  background-image: linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4)),
-    url(/images/HomepageImage-min.jpg);
+  /* background-image: linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4)),
+    url(/images/HomepageImage-min.jpg); */
   height: 100vh;
   width: 100%;
-  /* background-position: center; */
-  /* background-size: cover; */
-  /* background-repeat: no-repeat; */
-  /* background-attachment: fixed; */
-  /* BURDE FIKSE HEIGHT */
-  height: 100vh;
 }
 
 .postsContainer {
@@ -265,15 +251,15 @@ a:hover {
 }
 
 .posts-h1 {
-  font-size: 20px;
-  color: #fff;
+  font-size: 22px;
+  color: black;
   margin-top: 70px;
 }
 
 .posts-h2 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: lighter;
-  color: #fff;
+  color: black;
   line-height: 1.5;
   padding: 30px;
 }
@@ -294,7 +280,7 @@ a:hover {
 }
 
 .specificContainer {
-  height: 100vh;
+  /* height: 100vh; */
   width: 100vw;
   align-items: center;
   justify-content: center;
@@ -392,7 +378,7 @@ a:hover {
 .about-h1 {
   color: white;
   text-align: center;
-  padding-top: 140px;
+  padding-top: 120px;
 }
 
 .about-text {

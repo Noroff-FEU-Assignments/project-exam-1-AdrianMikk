@@ -38,6 +38,14 @@ body {
 
 .carouselAtag {
   overflow-x: hidden;
+  flex: 0 0 calc(100% / var(--items-per-screen));
+  max-width: calc(100% / var(--items-per-screen));
+  padding: var(--img-gap);
+  border-radius: 1rem;
+}
+
+.carousel-img {
+  max-width: 100%;
 }
 
 .handle {

@@ -28,11 +28,12 @@ tagHolder.classList.add("carouselAtag");
 // tagHolder.style.display = "flex";
 tagHolder.href = `../specific.html?id=${id}`;
 const img = document.createElement("img");
+img.classList.add("carousel-img")
 
 img.src = imgUrls;
-// tagHolder.append(img);
-// container.append(tagHolder);
-container.append(img)
+tagHolder.append(img);
+container.append(tagHolder);
+// container.append(img)
 }
 
 
