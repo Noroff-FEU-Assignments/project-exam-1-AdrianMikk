@@ -36,6 +36,10 @@ body {
   border-radius: 1rem;
 }
 
+.carouselAtag {
+  overflow-x: hidden;
+}
+
 .handle {
   border: none;
   border-radius: 1rem;

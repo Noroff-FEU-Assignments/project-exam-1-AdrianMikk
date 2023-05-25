@@ -1,23 +1,16 @@
-
 const form = document.querySelector("#contactForm");
-const contactBtn = document.querySelector("#contactButton");
 const fullName = document.querySelector("#fullName");
 const subject = document.querySelector("#subject");
 const email = document.querySelector("#email");
 const message = document.querySelector("#message");
 
-
-
 function validateForm(event) {
-  
   const errorMessages = document.querySelectorAll(".error-message");
-
-
   let isValid = true;
 
   errorMessages?.forEach((message) => {
-    message.innerHTML = ""
-  })
+    message.innerHTML = "";
+  });
 
   if (!checkLength(fullName.value, 4)) {
     isValid = false;
@@ -39,25 +32,21 @@ function validateForm(event) {
     addErrorMessage("Please enter a subject (at least 15 characters).", subject);
   }
 
-  if (!isValid) {
-  }
-
-  if (isValid === true) {
+  if (isValid) {
     console.log("IT WORKS");
-    event.preventDefault();
+    // event.preventDefault();
+    return true;
   }
 }
 
-// validateForm();
-
-form.addEventListener("input", validateForm);
-
+// form.addEventListener("input", validateForm);
 
 function addErrorMessage(message, field) {
   const errorMessage = document.createElement("div");
   errorMessage.classList.add("error-message");
   errorMessage.textContent = message;
   field.classList.add("error");
+  field.style.borderColor = "red";
   field.parentNode.insertBefore(errorMessage, field.nextSibling);
 }
 
@@ -70,40 +59,28 @@ function validateEmail(email) {
   const patternMatches = regEx.test(email);
   return patternMatches;
 }
+let btn = document.querySelector("#contactButton");
 
-form.addEventListener("submit", function (event) {
+btn.addEventListener("click", function (event) {
   event.preventDefault();
-  if (validateForm) {
-
+  if (validateForm()) {
     form.innerHTML = `<div>
-                        <h3 style="text-align: center; font-size: 2rem; margin-top: 50px;">Thank you! Form has been submitted.
-                        </h3> 
-                        <button id="successReturn"
-                        class=cta" style="padding: 5px;
-                        margin: right;">Go back</button>
+                        <h3 style="text-align: center; font-size: 2rem; margin-top: 50px;">Thank you! Form has been submitted.</h3>
+                        <button id="successReturn" class="cta" style="padding: 5px; margin-right: 5px;">Go back</button>
                       </div>`;
-    let btn = document.querySelector("#successReturn");
-
-    btn.addEventListener("click", function () {
-      location.reload();
-    });
+    // let btn = document.querySelector("#successReturn");
+console.log("form complete");
+    // btn.addEventListener("click", function () {
+      setTimeout(function() {
+        document.location.reload();
+      }, 3000);
+    //   location.reload();
+    // });
   } else {
     console.log("Complete form");
     event.preventDefault();
   }
 });
-
-
-// hmmmmm 
-
-function addErrorMessage(message, field) {
-  const errorMessage = document.createElement("div");
-  errorMessage.classList.add("error-message");
-  errorMessage.textContent = message;
-  field.classList.add("error");
-  field.style.borderColor = "red"; 
-  field.parentNode.insertBefore(errorMessage, field.nextSibling);
-}
 
 fullName.addEventListener("input", () => {
   if (fullName.classList.contains("error")) {

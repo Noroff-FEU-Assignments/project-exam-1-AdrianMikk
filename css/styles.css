@@ -19,9 +19,14 @@
 }
 
 body {
-  /* height: 100vh; */
+  min-height: 100%;
   width: 100vw;
   overflow-x: hidden;
+}
+
+main {
+  width: 100%;
+  height: 100%;
 }
 
 .home-text {
@@ -55,6 +60,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  height: 100vh;
 }
 
 /* Footer */
@@ -80,8 +86,9 @@ footer {
 .footer-links {
   color: black;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
+  gap: 5px;
 }
 
 .footer-links a {
@@ -174,7 +181,6 @@ a:hover {
   width: 200px;
   height: 50px;
   margin: auto;
-  top: -100px;
   margin-top: auto;
   justify-content: center;
   align-items: center;
@@ -216,19 +222,27 @@ a:hover {
   background-color: var(--post-hoverblue);
 }
 
-.list-container {
+/* .list-container {
   background-image: linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4)),
     url(/images/HomepageImage-min.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: repeat;
   background-attachment: fixed;
-  width: 100vw;
-  display: flex;
-}
+  height: 100vh;
+} */
 
 .posts-image-container {
-  width: 100vw;
+  background-image: linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4)),
+    url(/images/HomepageImage-min.jpg);
+  height: 100vh;
+  width: 100%;
+  /* background-position: center; */
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+  /* background-attachment: fixed; */
+  /* BURDE FIKSE HEIGHT */
+  height: 100vh;
 }
 
 .postsContainer {
@@ -326,6 +340,10 @@ a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  aspect-ratio: 1/1;
+  position: fixed;
+  /* top: 0;
+  left: 0; */
 }
 
 .modalContainer img {
@@ -333,6 +351,27 @@ a:hover {
   width: 100%;
   height: fit-content;
   padding: 10px;
+}
+
+.blurBox {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: auto;
+  backdrop-filter: blur(5px);
+  z-index: 9;
+}
+
+.blurBox img {
+  max-width: 100%;
+  height: fit-content;
+  padding: 10px;
+  scale: 1.5;
 }
 
 /* About Us */
@@ -353,7 +392,7 @@ a:hover {
 .about-h1 {
   color: white;
   text-align: center;
-  padding-top: 180px;
+  padding-top: 140px;
 }
 
 .about-text {
@@ -432,17 +471,6 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 1920px) {
-  body {
-    background-image: linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4)),
-      url(/images/HomepageImage-min.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-}
-
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
@@ -475,6 +503,13 @@ a:hover {
 
 .nav-active {
   transform: translateX(0%);
+}
+
+@media screen and (max-width: 500px) {
+  .blurBox img {
+    scale: unset;
+    transition: 0.3s ease-in-out;
+  }
 }
 
 @keyframes navLinkFade {

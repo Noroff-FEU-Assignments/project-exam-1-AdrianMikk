@@ -1,3 +1,5 @@
+import { removeModal } from "./global/functions.js"
+
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
@@ -37,25 +39,42 @@ function renderPost(post) {
             // console.log("click works", index++);
             // img.style.scale = "2";
             const specificContainer = document.querySelector(".specificContainer");
+            const blurBox = document.createElement("div");
+            blurBox.classList.add("blurBox");
+            blurBox.style.display = "flex";
+            specificContainer.append(blurBox);
 
             const modalContainer = document.createElement("div");
             modalContainer.classList.add("modalContainer");
             modalContainer.style.maxWidth = "100%"
             modalContainer.style.maxHeight = "fit-content"
-            modalContainer.style.zIndex = "99";
-            modalContainer.append(image);
-            // specificContainer.style.filter = "blur(10px)";
-            // const modal = document.createElement("img")
-            // modal.innerHTML = img;
-            // modal.style.scale = "3";
-            // modalContainer.append(modal);
-            specificContainer.append(modalContainer);
+            // modalContainer.style.zIndex = "99";
+            // blurBox.append(modalContainer);
+            blurBox.append(image);
             
+            removeModal(img, blurBox);
           });
+          // document.addEventListener("click", function(event) {
+          //   if (!image.contains(event.target)) {
+          //     blurBox.innerHTML = "";
+          //   }
+          // });
         }
 
-        
+        // document.addEventListener("click", function(event) {
+        //   if (!image.contains(event.target)) {
+        //     blurbox.innerHTML = "";
+        //   }
+        // });
 }
+
+// function removeModal(click, cont) {
+//         document.addEventListener("click", function(event) {
+//           if (!click.contains(event.target)) {
+//             cont.remove();
+//           }
+//         });
+// }
 
 
   async function main() {
