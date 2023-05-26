@@ -7,6 +7,7 @@
 :root {
   --handle-size: 2rem;
   --img-gap: 0.25rem;
+  --footer-blue: #80e1ff;
 }
 
 body {
@@ -46,6 +47,13 @@ body {
 
 .carousel-img {
   max-width: 100%;
+}
+
+.carousel-img:hover {
+  border: 1px solid var(--footer-blue);
+  border-radius: 0.8rem;
+  transition: 0.1s ease-in-out;
+  overflow: hidden;
 }
 
 .handle {

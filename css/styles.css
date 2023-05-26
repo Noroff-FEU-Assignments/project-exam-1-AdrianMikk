@@ -156,7 +156,6 @@ nav {
 
 a.active,
 a:hover {
-  background: rgba(0, 195, 255, 0.2);
   border-radius: 2px;
   transition: 0.5s;
 }
