@@ -1,20 +1,18 @@
-/* Contact */
-
-.contact-h1 {
-  color: white;
-  text-align: center;
-  padding: 15px;
-  font-size: 2rem;
-}
-
-.contact-main {
+.page-container {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(/images/ContactImage-min.jpg);
+  background-size: cover;
+  overflow: hidden;
 }
 
-.contact {
-  color: white;
-  margin: auto;
+.header-container {
+  margin: 40px auto;
+  text-align: center;
+  font-weight: 400;
+}
+
+.form-wrapper {
+  margin: 100px auto;
 }
 
 .contact__text {

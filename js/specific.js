@@ -36,8 +36,6 @@ function renderPost(post) {
           let index = 0;
 
           img.addEventListener("click", function() {
-            // console.log("click works", index++);
-            // img.style.scale = "2";
             const specificContainer = document.querySelector(".specificContainer");
             const blurBox = document.createElement("div");
             blurBox.classList.add("blurBox");
@@ -48,33 +46,12 @@ function renderPost(post) {
             modalContainer.classList.add("modalContainer");
             modalContainer.style.maxWidth = "100%"
             modalContainer.style.maxHeight = "fit-content"
-            // modalContainer.style.zIndex = "99";
-            // blurBox.append(modalContainer);
             blurBox.append(image);
             
             removeModal(img, blurBox);
           });
-          // document.addEventListener("click", function(event) {
-          //   if (!image.contains(event.target)) {
-          //     blurBox.innerHTML = "";
-          //   }
-          // });
         }
-
-        // document.addEventListener("click", function(event) {
-        //   if (!image.contains(event.target)) {
-        //     blurbox.innerHTML = "";
-        //   }
-        // });
-}
-
-// function removeModal(click, cont) {
-//         document.addEventListener("click", function(event) {
-//           if (!click.contains(event.target)) {
-//             cont.remove();
-//           }
-//         });
-// }
+       }
 
 
   async function main() {
@@ -82,10 +59,3 @@ function renderPost(post) {
     renderPost(post);
 }
 main();
-
-// function grabImg(data) {
-//  const img = document.createElement("div")
-//  img.innerHTML = data;
-
-//  const
-// }

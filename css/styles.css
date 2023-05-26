@@ -1,25 +1,22 @@
+:root {
+  --post-blue: #64a4ce;
+  --post-hoverblue: #2980b9;
+  --footer-blue: #80e1ff;
+}
+
 * {
   padding: 0;
-  margin: 0;
+  margin: auto;
   list-style: none;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
-:root {
-  --footer-blue: #80e1ff;
-}
-
-:root {
-  --post-blue: #64a4ce;
-}
-
-:root {
-  --post-hoverblue: #2980b9;
-}
-
 body {
-  height: 100vh;
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 main {
@@ -67,8 +64,8 @@ footer {
   padding: 20px 0;
   text-align: center;
   font-weight: bold;
-  /* margin-top: 100px; */
   bottom: 0;
+  height: 80px;
   width: 100%;
   background-color: var(--footer-blue);
   z-index: 5;
@@ -101,6 +98,7 @@ nav {
   min-height: 8vh;
   background-color: white;
   width: 100%;
+  height: 80px;
   position: fixed;
   z-index: 1;
   border-bottom: 1px solid black;
@@ -284,6 +282,8 @@ a:hover {
 .specificContainer figure {
   display: flex;
   flex-direction: row;
+  transition: all 0.2s ease-in-out;
+  margin: 5px 10px;
 }
 
 .specificContainer figure img {
