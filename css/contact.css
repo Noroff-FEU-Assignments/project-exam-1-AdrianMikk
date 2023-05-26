@@ -2,19 +2,26 @@
 
 .contact-h1 {
   color: white;
-  text-align: center;
-  padding: 15px;
   font-size: 2rem;
+  margin-bottom: 30px;
+  padding-top: 6rem;
+  text-align: center;
 }
 
 .contact-main {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(/images/ContactImage-min.jpg);
+  background-image: url(/images/ContactImage-min.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-top: 80px;
+  padding-bottom: 100px;
 }
 
 .contact {
   color: white;
   margin: auto;
+  transform: translateY(5%);
+  padding-bottom: 100px;
+  position: relative;
 }
 
 .contact__text {
@@ -37,6 +44,10 @@
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+}
+
+.form-field {
+  width: 100%;
 }
 
 .contact__container {
@@ -134,7 +145,7 @@
 
 @media screen and (max-width: 768px) {
   .contact-h1 {
-    padding-top: 110px;
+    /* padding-top: 110px; */
   }
 }
 

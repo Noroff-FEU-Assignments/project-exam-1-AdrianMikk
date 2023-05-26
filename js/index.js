@@ -144,39 +144,5 @@ async function main() {
 
 }
 
-main()
+main();
 
-
-
-//   const baseUrl = "https://travelblog.hoiskypoisky.no/wp-json/wp/v2/posts?per_page=12"; 
-//   const perPage = "?per_page=";
-//   const perPageNum = 10;
-//   const pageParam = "&page=";
-//   const categoryFilterParam = "?categories=";
-
-// async function fetchCarouselImage() {
-//   const response = await fetch(baseUrl) 
-//   const data = await response.json()
-//   fetchImgIds(data);
-// }
-
-// function fetchImgIds(data) {
-//   for (let i = 0; i < data.length; i++) {
-    
-//     const featuredImgData = data[i].jetpack_featured_media_url;
-    
-//     populateDiv(featuredImgData)
-
-//   }
-// }
-
-// function populateDiv(imgUrls) {
-//   const container = document.querySelector(".slider")
-//   // container.classList.add("--slider-index: 2")
-//   console.log(imgUrls)
-//   const img = document.createElement("img");
-//   img.src = imgUrls;
-//   container.append(img);
-// }
-
-// fetchCarouselImage()

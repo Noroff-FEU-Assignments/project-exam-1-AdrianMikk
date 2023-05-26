@@ -69,6 +69,8 @@ footer {
   width: 100%;
   background-color: var(--footer-blue);
   z-index: 5;
+  position: fixed;
+  margin-bottom: 0px;
 }
 
 .footer-p {
@@ -81,7 +83,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 5px;
+  margin-top: -10px;
 }
 
 .footer-links a {
@@ -102,7 +104,6 @@ nav {
   position: fixed;
   z-index: 1;
   border-bottom: 1px solid black;
-  /* background-color: rgba(0, 195, 255, 0.685); */
 }
 
 .logo {
@@ -317,8 +318,6 @@ a:hover {
   transform: translate(-50%, -50%);
   aspect-ratio: 1/1;
   position: fixed;
-  /* top: 0;
-  left: 0; */
 }
 
 .modalContainer img {

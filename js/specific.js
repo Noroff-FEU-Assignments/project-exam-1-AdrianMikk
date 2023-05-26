@@ -51,7 +51,7 @@ function renderPost(post) {
             removeModal(img, blurBox);
           });
         }
-       }
+      }
 
 
   async function main() {
