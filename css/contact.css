@@ -1,7 +1,14 @@
 /* Contact */
 
+:root {
+  --post-blue: #64a4ce;
+  --post-hoverblue: #2980b9;
+  --footer-blue: #80e1ff;
+}
+
 .contact-h1 {
-  color: white;
+  color: black;
+  text-shadow: 0 0 5px var(--footer-blue);
   font-size: 2rem;
   margin-bottom: -30px;
   padding-top: 6rem;
@@ -86,7 +93,7 @@
 }
 
 #contactButton[type="submit"] {
-  background-color: #04aa6d;
+  background-color: var(--footer-blue);
   color: black;
   padding: 12px 20px;
   border: none;
@@ -142,12 +149,6 @@
 }
 
 /* MEDIA QUERIES */
-
-@media screen and (max-width: 768px) {
-  .contact-h1 {
-    /* padding-top: 110px; */
-  }
-}
 
 @media screen and (max-width: 600px) {
   .contact {
