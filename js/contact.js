@@ -34,12 +34,9 @@ function validateForm(event) {
 
   if (isValid) {
     console.log("IT WORKS");
-    // event.preventDefault();
     return true;
   }
 }
-
-// form.addEventListener("input", validateForm);
 
 function addErrorMessage(message, field) {
   const errorMessage = document.createElement("div");
@@ -69,13 +66,10 @@ btn.addEventListener("click", function (event) {
                         <button id="successReturn" class="cta" style="padding: 5px; margin-right: 5px;">Go back</button>
                       </div>`;
     // let btn = document.querySelector("#successReturn");
-console.log("form complete");
-    // btn.addEventListener("click", function () {
+      console.log("form complete");
       setTimeout(function() {
         document.location.reload();
       }, 3000);
-    //   location.reload();
-    // });
   } else {
     console.log("Complete form");
     event.preventDefault();

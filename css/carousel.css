@@ -18,6 +18,9 @@ body {
   display: flex;
   justify-content: center;
   overflow: hidden;
+  max-width: 1040px;
+  background: #0000007d;
+  border: 1px solid #0c151e;
 }
 
 .slider {
@@ -47,23 +50,25 @@ body {
 
 .carousel-img {
   max-width: 100%;
+  transition: all 0.3s ease-in-out;
 }
 
 .carousel-img:hover {
   border: 1px solid var(--footer-blue);
   border-radius: 0.8rem;
-  transition: 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
   overflow: hidden;
+  filter: grayscale(1);
 }
 
 .handle {
   border: none;
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
   flex-grow: 0;
   flex-shrink: 0;
   background-color: white;
   z-index: 2;
-  margin: var(--img-gap) 0;
+  margin: 0;
   width: var(--handle-size);
   cursor: pointer;
   font-size: 5rem;
