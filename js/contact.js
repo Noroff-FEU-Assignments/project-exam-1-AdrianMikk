@@ -67,9 +67,9 @@ btn.addEventListener("click", function (event) {
                       </div>`;
     // let btn = document.querySelector("#successReturn");
       console.log("form complete");
-      setTimeout(function() {
-        document.location.reload();
-      }, 3000);
+      // setTimeout(function() {
+      //   document.location.reload();
+      // }, 3000);
   } else {
     console.log("Complete form");
     event.preventDefault();
