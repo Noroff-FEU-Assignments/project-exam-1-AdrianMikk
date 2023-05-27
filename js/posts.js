@@ -14,6 +14,7 @@ const postContainer = document.querySelector(".postsContainer");
 function renderPost(data) {
     for (let i = 0; i < data.length; i++) {
         const featuredPost = data[i];
+        const altText = data[i].title.rendered;
         // console.log(featuredPost);
         console.log(data[0].jetpack_featured_media_url)
 
@@ -22,7 +23,7 @@ function renderPost(data) {
         postElement.classList.add("post");
         postElement.innerHTML = `
             <div>
-            <img src="${featuredPost.jetpack_featured_media_url}"/>
+            <img src="${featuredPost.jetpack_featured_media_url}" alt="${altText}"/>
             <div class="post-button">
             <h2>${featuredPost.title.rendered}</h2>
             <button>

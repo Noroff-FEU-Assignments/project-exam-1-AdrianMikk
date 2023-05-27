@@ -14,13 +14,15 @@ function fetchImgIds(data) {
 for (let i = 0; i < data.length; i++) {
   
   const featuredImgData = data[i].jetpack_featured_media_url;
+  const altText = data[i].title.rendered;
+
   
-  populateDiv(featuredImgData, data[i].id)
+  populateDiv(featuredImgData, altText, data[i].id)
 
 }
 }
 
-function populateDiv(imgUrls, id) {
+function populateDiv(imgUrls, altText, id) {
 const container = document.querySelector(".slider");
 console.log(imgUrls)
 const tagHolder = document.createElement("a");
@@ -31,6 +33,8 @@ const img = document.createElement("img");
 img.classList.add("carousel-img")
 
 img.src = imgUrls;
+img.alt = altText;
+
 tagHolder.append(img);
 container.append(tagHolder);
 // container.append(img)

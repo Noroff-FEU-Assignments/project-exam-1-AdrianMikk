@@ -60,11 +60,14 @@ let btn = document.querySelector("#contactButton");
 
 btn.addEventListener("click", function (event) {
   event.preventDefault();
-  if (validateForm()) {
-    form.innerHTML = `<div>
-                        <h3 style="text-align: center; font-size: 2rem; margin-top: 50px;">Thank you! Form has been submitted.</h3>
-                        <button id="successReturn" class="cta" style="padding: 5px; margin-right: 5px;">Go back</button>
-                      </div>`;
+  const confDialog = document.querySelector(".confirmDialog");
+    if (validateForm()) {
+    confDialog.style.display = "block";
+    form.style.display = "none";
+    // form.innerHTML = `<div>
+    //                     <h3 style="text-align: center; font-size: 2rem; margin-top: 150px;">Thank you! Form has been submitted.</h3>
+    //                     <button id="successReturn" class="cta" style="padding: 5px; margin-right: 5px;">Go back</button>
+    //                   </div>`;
     // let btn = document.querySelector("#successReturn");
       console.log("form complete");
       // setTimeout(function() {

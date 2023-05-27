@@ -20,7 +20,7 @@
   background-position: center;
   background-size: cover;
   padding-top: 80px;
-  padding-bottom: 355px;
+  padding-bottom: 385px;
 }
 
 .contact {
@@ -127,13 +127,29 @@
   color: green;
 }
 
+.confirmDialog {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 150px;
+  border: var(--footer-blue);
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
 #successReturn {
   background-color: rgb(128 225 255);
+  padding: 10px;
+  margin: 20px 40px;
   color: #000000;
   font-size: 16px;
+  font-weight: 600;
   border-radius: 5px;
   border: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
 }
 
 #successReturn[type="submit"]:hover {
