@@ -27,7 +27,6 @@ const container = document.querySelector(".slider");
 console.log(imgUrls)
 const tagHolder = document.createElement("a");
 tagHolder.classList.add("carouselAtag");
-// tagHolder.style.display = "flex";
 tagHolder.href = `../specific.html?id=${id}`;
 const img = document.createElement("img");
 img.classList.add("carousel-img")
@@ -37,7 +36,6 @@ img.alt = altText;
 
 tagHolder.append(img);
 container.append(tagHolder);
-// container.append(img)
 }
 
 

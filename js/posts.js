@@ -15,7 +15,6 @@ function renderPost(data) {
     for (let i = 0; i < data.length; i++) {
         const featuredPost = data[i];
         const altText = data[i].title.rendered;
-        // console.log(featuredPost);
         console.log(data[0].jetpack_featured_media_url)
 
         // create a new element to hold the post information

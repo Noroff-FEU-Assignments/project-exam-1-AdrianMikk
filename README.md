@@ -23,5 +23,9 @@ Discord: HoiskyPoisky#0358
 
 # Acknowledgments
 
-I wanna thank.
-Johnny
+I wanna thank people in the discord channel. And especially Hans M. Andreassen.
+Also got some help from these:
+
+https://www.youtube.com/@KevinPowell
+https://stackoverflow.com/
+https://chat.openai.com/
