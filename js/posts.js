@@ -39,14 +39,18 @@ function renderPost(data) {
 }
 
 async function main() {
+    
+    
     const posts = await fetchFeatured();
     renderPost(posts)
-
+    
     /* Loader */
     const loader = document.querySelector(".loading-icon");  
     loader.innerHTML = "";
     loader.style.display = 'none';
-    setTimeout(hideLoader, 3000);
+    const viewMoreButton = document.querySelector(".viewmore-button");  
+    viewMoreButton.style.display = 'block';
+
 
     let page = 0;
     const viewMoreBtn = document.querySelector(".viewmore-button");

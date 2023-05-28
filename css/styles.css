@@ -491,6 +491,9 @@ a:hover {
     scale: unset;
     transition: 0.3s ease-in-out;
   }
+  .specificContainer {
+    padding-inline: 0;
+  }
 }
 
 @keyframes navLinkFade {
