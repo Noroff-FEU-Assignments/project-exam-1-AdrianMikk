@@ -4,6 +4,10 @@
   --post-blue: #64a4ce;
   --post-hoverblue: #2980b9;
   --footer-blue: #80e1ff;
+  --error-red: #ff0000;
+  --submit-hover: #559fb6;
+  --succeed-green: #00ff00;
+  --border-blue: #0070f3;
 }
 
 .contact-h1 {
@@ -81,12 +85,12 @@
 .contact input[type="text"]:focus,
 .contact input[type="email"]:focus {
   outline: none;
-  border-color: #0070f3;
+  border-color: var(--border-blue);
   box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.25);
 }
 
 .contact .form-error {
-  color: red;
+  color: var(--error-red);
   margin-top: 5px;
   font-size: 14px;
 }
@@ -124,7 +128,7 @@
 
 #succeedMessage {
   text-align: center;
-  color: green;
+  color: var(--succeed-green);
 }
 
 .confirmDialog {
@@ -138,7 +142,7 @@
 }
 
 #successReturn {
-  background-color: rgb(128 225 255);
+  background-color: var(--footer-blue);
   padding: 10px;
   margin: 20px 40px;
   color: #000000;
@@ -153,13 +157,13 @@
 }
 
 #successReturn[type="submit"]:hover {
-  background-color: rgb(85, 159, 182);
+  background-color: var(--submit-hover);
 }
 
 /* Error Messages */
 
 .error-message {
-  color: red;
+  color: var(--error-red);
   font-weight: 900;
 }
 

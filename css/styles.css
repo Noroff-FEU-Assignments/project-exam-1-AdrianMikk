@@ -139,6 +139,12 @@ nav {
   font-weight: bold;
 }
 
+nav ul li a.active,
+nav ul li a:focus {
+  /* Define your active styles here */
+  background-color: var(--footer-blue);
+}
+
 .burger {
   display: none;
   cursor: pointer;
@@ -380,7 +386,7 @@ a:hover {
 
 /* LOADER */
 
-.loader {
+.loading-icon {
   display: block;
   position: relative;
   margin: auto;

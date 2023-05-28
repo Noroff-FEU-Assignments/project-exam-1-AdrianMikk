@@ -42,6 +42,12 @@ async function main() {
     const posts = await fetchFeatured();
     renderPost(posts)
 
+    /* Loader */
+    const loader = document.querySelector(".loading-icon");  
+    loader.innerHTML = "";
+    loader.style.display = 'none';
+    setTimeout(hideLoader, 3000);
+
     let page = 0;
     const viewMoreBtn = document.querySelector(".viewmore-button");
     viewMoreBtn.addEventListener("click", async function() {
