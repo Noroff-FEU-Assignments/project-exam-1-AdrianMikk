@@ -1,0 +1,19 @@
+{
+  "name": "project-exam-1-adrianmikk",
+  "version": "1.0.0",
+  "description": "A & K's Travel Blog is a travel blog that I created for my Project Exam 1.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Noroff-FEU-Assignments/project-exam-1-AdrianMikk.git"
+  },
+  "author": "adrianmikk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Noroff-FEU-Assignments/project-exam-1-AdrianMikk/issues"
+  },
+  "homepage": "https://github.com/Noroff-FEU-Assignments/project-exam-1-AdrianMikk#readme"
+}
