@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Noroff-FEU-Assignments/project-exam-1-AdrianMikk/issues"
   },
-  "homepage": "https://github.com/Noroff-FEU-Assignments/project-exam-1-AdrianMikk#readme"
+  "homepage": "https://github.com/Noroff-FEU-Assignments/project-exam-1-AdrianMikk#readme",
+  "devDependencies": {
+    "cypress": "^13.3.3",
+    "eslint-plugin-cypress": "^2.15.1"
+  }
 }
